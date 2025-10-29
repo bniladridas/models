@@ -37,7 +37,7 @@ ENV/
 Thumbs.db
 
 # ML / Model
-models/
+# models/  # Uncomment to ignore
 trained_model/
 checkpoints/
 logs/
@@ -45,7 +45,7 @@ logs/
 *.pkl
 
 # Data (uncomment if you want to ignore large datasets)
-data/
+# data/  # Uncomment to ignore
 
 # Logs
 *.log

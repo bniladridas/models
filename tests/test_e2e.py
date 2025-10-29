@@ -17,7 +17,7 @@ def test_training_runs():
 def test_evaluation_runs():
     """Test evaluation script can run (assuming model exists)."""
     # This would require a trained model; skip if not present
-    if not os.path.exists("trained_model"):
+    if not os.path.exists("models/trained_model"):
         import pytest
 
         pytest.skip("Trained model not available for evaluation test")

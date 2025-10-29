@@ -54,6 +54,7 @@ tokenized_datasets["train"] = tokenized_datasets["train"].select(range(1000))
 
 * default training runs on **cpu** inside docker; update configurations for **gpu** usage.
 * trained models are automatically saved in `models/` with timestamped filenames.
+* model available on hugging face: https://huggingface.co/harpertoken/harpertokenGPT2
 
 ## conventional commits
 

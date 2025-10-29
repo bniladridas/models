@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Conventional commit hook
+# Enforces commit messages starting with type: lowercase, <=30 chars
+
+msg_file="$1"
+first_line=$(head -n1 "$msg_file")
+
+# Check if starts with type: followed by lowercase letter
+if ! echo "$first_line" | grep -qE '^(feat|fix|docs|style|refactor|test|chore): [a-z]'; then
+    echo "Error: Commit message must start with 'type: ' followed by lowercase description."
+    exit 1
+fi
+
+# Check length <=30
+len=${#first_line}
+if [ $len -gt 30 ]; then
+    echo "Error: First line must be <=30 characters. Current: $len"
+    exit 1
+fi

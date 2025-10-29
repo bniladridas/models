@@ -18,7 +18,7 @@ dependencies = [
     "pytest-cov",
 ]
 optional-dependencies = { dev = ["pre-commit", "black", "isort", "flake8", "yamllint"] }
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 readme = "README.md"
 license = {text = "Apache-2.0"}
 

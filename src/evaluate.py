@@ -35,10 +35,12 @@ model = model.to(device)
 model.eval()
 input_text = "The quick brown fox"
 input_ids = tokenizer.encode(input_text, return_tensors="pt").to(device)
+attention_mask = torch.ones_like(input_ids).to(device)
 
 with torch.no_grad():
     output = model.generate(
         input_ids,
+        attention_mask=attention_mask,
         max_length=50,
         num_return_sequences=1,
         no_repeat_ngram_size=2,
